@@ -13,7 +13,7 @@ public class PontoVenda {
 
 	@Override
 	public String toString() {
-		return "PontoVenda [loja=" + loja + ", bairro=" + bairro + ", estoque=" + estoque + "]";
+		return "Loja = " + loja + ", Bairro = " + bairro + ", Estoque = " + estoque + "";
 	}
 
 	public String getLoja() {

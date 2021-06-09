@@ -2,11 +2,11 @@ package marketplace;
 
 public class Cliente {
 	int idCliente;
-	String modelo;
+	int modelo;
 	String bairro;
 	int quantidade;
 
-	public Cliente(int idCliente, String modelo, String bairro, int quantidade) {
+	public Cliente(int idCliente, int modelo, String bairro, int quantidade) {
 		this.idCliente = idCliente;
 		this.modelo = modelo;
 		this.bairro = bairro;
@@ -15,8 +15,8 @@ public class Cliente {
 
 	@Override
 	public String toString() {
-		return "Cliente [idCliente=" + idCliente + ", modelo=" + modelo + ", bairro=" + bairro + ", quantidade="
-				+ quantidade + "]";
+		return "Cliente idCliente=" + idCliente + ", modelo=" + modelo + ", bairro=" + bairro + ", quantidade="
+				+ quantidade + "";
 	}
 
 	public int getIdCliente() {
@@ -27,11 +27,11 @@ public class Cliente {
 		this.idCliente = idCliente;
 	}
 
-	public String getModelo() {
+	public int getModelo() {
 		return modelo;
 	}
 
-	public void setModelo(String modelo) {
+	public void setModelo(int modelo) {
 		this.modelo = modelo;
 	}
 
