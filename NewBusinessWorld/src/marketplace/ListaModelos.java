@@ -44,7 +44,7 @@ public class ListaModelos {
 			lista = novo;
 			novo.prox = null;
 		}
-		System.out.println("Produto cadastrado com sucesso");
+		System.out.println("Loja cadastrada com sucesso !!\n");
 	}
 
 	public boolean remove(String elem) {
@@ -79,7 +79,7 @@ public class ListaModelos {
 				} else {
 					atualiza = (lista.dado.getEstoque()) - qtd;
 					lista.dado.setEstoque(atualiza);
-					System.out.println("Venda realizada com sucesso");
+					System.out.println("Venda realizada com sucesso !!!");
 					ok = true;
 					if (lista.dado.getEstoque() == 0) {
 						remove(lista.dado.getBairro());
@@ -105,8 +105,8 @@ public class ListaModelos {
 					System.out.println("Nenhuma das lojas atende o bairro do cliente");
 				}
 			}
-		}else {
-			System.out.println("Produto não cadastrado na loja");
+		} else {
+			System.out.println("Produto não cadastrado na loja \n Venda não realizada\n");
 		}
 	}
 
@@ -114,27 +114,6 @@ public class ListaModelos {
 		NO aux = lista;
 		while (aux != null) {
 			System.out.println("  " + aux.dado);
-			aux = aux.prox;
-		}
-		System.out.println("\n------------------------------------");
-	}
-
-	public int count() {
-		int cont = 0;
-		NO aux = lista;
-		while (aux != null) {
-			cont++;
-			aux = aux.prox;
-		}
-		return cont;
-	}
-
-	public void showGreaters(int valor) {
-		NO aux = lista;
-		System.out.println("\n Lista dos maiores valores do que:" + valor);
-		while (aux != null) {
-			if (aux.dado.getEstoque() > valor)
-				System.out.print("  " + aux.dado);
 			aux = aux.prox;
 		}
 		System.out.println("\n------------------------------------");
